@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist KAWAI 🍓</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Quicksand & Fredoka -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+        }
+        h1, h2, h3, .font-fredoka {
+            font-family: 'Fredoka', sans-serif;
+        }
+        .strawberry-bg {
+            background-color: #fff0f3;
+            background-image: repeating-linear-gradient(
+                45deg,
+                #fff0f3,
+                #fff0f3 25px,
+                #ffd1dc 25px,
+                #ffd1dc 50px
+            );
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-8px) rotate(5deg); }
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="strawberry-bg text-stone-700 min-h-screen flex flex-col justify-between">
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-md border-b-2 border-pink-200">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#inicio" class="flex items-center gap-2 group">
+                <span class="text-2xl animate-float">🍓</span>
+                <span class="text-xl font-bold font-fredoka text-rose-600 group-hover:text-rose-500 transition">Playlist KAWAI</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-6 font-semibold">
+                <a href="#inicio" class="hover:text-rose-500 transition">Inicio</a>
+                <a href="#destacadas" class="hover:text-rose-500 transition">Tarjetas</a>
+                <a href="#generos" class="hover:text-rose-500 transition">Géneros</a>
+                <a href="#canciones" class="hover:text-rose-500 transition">Canciones</a>
+                <a href="#contacto" class="bg-rose-500 hover:bg-rose-600 text-white px-4 py-2 rounded-full shadow-md shadow-rose-200 transition transform hover:scale-105">
+                    <i class="fa-solid fa-heart mr-1"></i> Contacto
+                </a>
+            </nav>
+
+            <button id="menu-btn" class="md:hidden text-rose-500 text-2xl focus:outline-none cursor-pointer">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-pink-100 px-6 py-4 flex flex-col gap-4 shadow-lg">
+            <a href="#inicio" class="mobile-link hover:text-rose-500 font-semibold">Inicio</a>
+            <a href="#destacadas" class="mobile-link hover:text-rose-500 font-semibold">Tarjetas</a>
+            <a href="#generos" class="mobile-link hover:text-rose-500 font-semibold">Géneros</a>
+            <a href="#canciones" class="mobile-link hover:text-rose-500 font-semibold">Canciones</a>
+            <a href="#contacto" class="mobile-link bg-rose-500 text-white text-center py-2 rounded-full font-semibold shadow">Contacto</a>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="flex-grow">
+
+        <!-- SECCIÓN HERO -->
+        <section id="inicio" class="max-w-6xl mx-auto px-4 py-16 text-center">
+            <div class="inline-block bg-white/80 border-2 border-pink-200 px-4 py-1 rounded-full text-rose-500 font-bold text-sm mb-4 shadow-sm animate-bounce">
+                🍓 ¡Bienvenida a tu rincón musical favorito! ✨
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-rose-600 mb-6 drop-shadow-sm">
+                Playlist KAWAI
+            </h1>
+            <p class="text-lg md:text-xl text-stone-600 max-w-2xl mx-auto mb-8 font-medium">
+                Disfruta de la mejor colección de Phonk, Pop, Rock, Indie, Reggaeton, K-Pop y J-Pop directamente en YouTube.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#canciones" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-6 py-3 rounded-full shadow-lg shadow-rose-300 transition transform hover:-translate-y-1 inline-flex items-center gap-2">
+                    <i class="fa-solid fa-play"></i> Ver Canciones
+                </a>
+                <a href="#destacadas" class="bg-white hover:bg-rose-50 text-rose-500 border-2 border-rose-300 font-bold px-6 py-3 rounded-full shadow-md transition transform hover:-translate-y-1">
+                    Ver Tarjetas 🍓
+                </a>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE TARJETAS DE EXPERIENCIA -->
+        <section id="destacadas" class="max-w-6xl mx-auto px-4 py-12">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-rose-600 font-fredoka">Tarjetas de Experiencia 🍓</h2>
+                <p class="text-stone-500 font-medium">Explora las categorías principales de nuestra colección</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Tarjeta 1 -->
+                <div class="bg-white/90 backdrop-blur border-2 border-pink-200 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition transform hover:-translate-y-2 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-48 overflow-hidden bg-rose-100">
+                            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80" alt="Conciertos" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                            <span class="absolute top-3 right-3 bg-rose-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Conciertos</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-rose-600 mb-2">Vibes en Vivo</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed">
+                                Siente la energía de los escenarios con las presentaciones más icónicas de tus bandas favoritas.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openInfoModal('Vibes en Vivo', 'Los conciertos transmiten una energía única. Esta sección recopila los mejores momentos en vivo, acústicos íntimos y festivales llenos de luces de colores.')" class="w-full bg-rose-50 hover:bg-rose-100 text-rose-600 font-bold py-2.5 rounded-xl border border-rose-200 transition cursor-pointer">
+                            Explorar Más 🍓
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="bg-white/90 backdrop-blur border-2 border-pink-200 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition transform hover:-translate-y-2 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-48 overflow-hidden bg-rose-100">
+                            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80" alt="Estudio" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                            <span class="absolute top-3 right-3 bg-rose-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Estudio</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-rose-600 mb-2">Estudio & Acústica</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed">
+                                Descubre los instrumentos, sintetizadores y arreglos vocales que dan vida a cada melodía.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openInfoModal('Estudio & Acústica', 'Detrás de cada gran canción hay horas de grabación, afinación y diseño sonoro meticuloso.')" class="w-full bg-rose-50 hover:bg-rose-100 text-rose-600 font-bold py-2.5 rounded-xl border border-rose-200 transition cursor-pointer">
+                            Explorar Más 🍓
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="bg-white/90 backdrop-blur border-2 border-pink-200 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition transform hover:-translate-y-2 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-48 overflow-hidden bg-rose-100">
+                            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" alt="Café" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                            <span class="absolute top-3 right-3 bg-rose-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Café & Beats</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-rose-600 mb-2">Café & Melodías</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed">
+                                La compañía perfecta para acompañar tu día con ritmos potentes, relajantes y un ambiente acogedor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openInfoModal('Café & Melodías', 'Una selección única de ritmos para acompañarte mientras estudias, trabajas o te relajas.')" class="w-full bg-rose-50 hover:bg-rose-100 text-rose-600 font-bold py-2.5 rounded-xl border border-rose-200 transition cursor-pointer">
+                            Explorar Más 🍓
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN GÉNEROS MUSICALES -->
+        <section id="generos" class="max-w-6xl mx-auto px-4 py-12">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-rose-600 font-fredoka">Géneros Musicales 🎧</h2>
+                <p class="text-stone-500 font-medium">Categorías seleccionadas de nuestra gran colección</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+                <div class="bg-white border-2 border-pink-200 rounded-2xl p-4 text-center shadow-md">
+                    <div class="text-3xl mb-2">🏎️</div>
+                    <h3 class="font-bold text-rose-600 font-fredoka">Phonk</h3>
+                    <p class="text-xs text-stone-500">5 Canciones</p>
+                </div>
+                <div class="bg-white border-2 border-pink-200 rounded-2xl p-4 text-center shadow-md">
+                    <div class="text-3xl mb-2">🎤</div>
+                    <h3 class="font-bold text-rose-600 font-fredoka">Pop</h3>
+                    <p class="text-xs text-stone-500">7 Canciones</p>
+                </div>
+                <div class="bg-white border-2 border-pink-200 rounded-2xl p-4 text-center shadow-md">
+                    <div class="text-3xl mb-2">🎸</div>
+                    <h3 class="font-bold text-rose-600 font-fredoka">Rock</h3>
+                    <p class="text-xs text-stone-500">5 Canciones</p>
+                </div>
+                <div class="bg-white border-2 border-pink-200 rounded-2xl p-4 text-center shadow-md">
+                    <div class="text-3xl mb-2">🌿</div>
+                    <h3 class="font-bold text-rose-600 font-fredoka">Indie</h3>
+                    <p class="text-xs text-stone-500">5 Canciones</p>
+                </div>
+                <div class="bg-white border-2 border-pink-200 rounded-2xl p-4 text-center shadow-md">
+                    <div class="text-3xl mb-2">🔥</div>
+                    <h3 class="font-bold text-rose-600 font-fredoka">Reggaeton</h3>
+                    <p class="text-xs text-stone-500">6 Canciones</p>
+                </div>
+                <div class="bg-white border-2 border-pink-200 rounded-2xl p-4 text-center shadow-md">
+                    <div class="text-3xl mb-2">✨</div>
+                    <h3 class="font-bold text-rose-600 font-fredoka">K-Pop</h3>
+                    <p class="text-xs text-stone-500">13 Canciones</p>
+                </div>
+                <div class="bg-white border-2 border-pink-200 rounded-2xl p-4 text-center shadow-md">
+                    <div class="text-3xl mb-2">🌸</div>
+                    <h3 class="font-bold text-rose-600 font-fredoka">J-Pop</h3>
+                    <p class="text-xs text-stone-500">5 Canciones</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CANCIONES FAVORITAS POR GÉNERO -->
+        <section id="canciones" class="max-w-4xl mx-auto px-4 py-12">
+            <div class="bg-white/95 backdrop-blur border-2 border-pink-200 rounded-3xl p-6 md:p-8 shadow-2xl">
+                <div class="flex flex-col md:flex-row justify-between items-center mb-8 border-b border-pink-100 pb-4">
+                    <div>
+                        <h2 class="text-2xl md:text-3xl font-bold text-rose-600 font-fredoka">Canciones Favoritas 🎶</h2>
+                        <p class="text-stone-500 text-sm">Haz clic en el botón para escuchar cada tema en YouTube</p>
+                    </div>
+                    <span class="mt-2 md:mt-0 bg-rose-100 text-rose-600 px-3 py-1 rounded-full text-xs font-bold">
+                        <i class="fa-solid fa-music mr-1"></i> 46 Tracks
+                    </span>
+                </div>
+
+                <div class="space-y-8">
+
+                    <!-- BLOQUE PHONK (NUEVO) -->
+                    <div>
+                        <h3 class="text-xl font-bold text-rose-600 font-fredoka mb-4 flex items-center gap-2"><span>🏎️</span> PHONK</h3>
+                        <div class="space-y-3">
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">So Tired</h4><p class="text-xs text-stone-500">Nueki & Tolchonov</p></div></div>
+                                <a href="https://youtu.be/xrHsSiqGiQM" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Neon Blade</h4><p class="text-xs text-stone-500">MoonDeity</p></div></div>
+                                <a href="https://youtu.be/gfIb3nMjXgg" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Vendetta</h4><p class="text-xs text-stone-500">MUPP & Sadfriendd</p></div></div>
+                                <a href="https://youtu.be/3PCxM9jVVbQ" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Sea of Problems</h4><p class="text-xs text-stone-500">G59 / Phonk Mix</p></div></div>
+                                <a href="https://youtu.be/h92uB42rJg8" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Midnight</h4><p class="text-xs text-stone-500">Phonk Release</p></div></div>
+                                <a href="https://youtu.be/2W91W35lzuE" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BLOQUE POP -->
+                    <div>
+                        <h3 class="text-xl font-bold text-rose-600 font-fredoka mb-4 flex items-center gap-2"><span>🎤</span> POP</h3>
+                        <div class="space-y-3">
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">deja vu</h4><p class="text-xs text-stone-500">Olivia Rodrigo</p></div></div>
+                                <a href="https://youtu.be/cii6ruuycQA?si=VwNzKAWm3VN-lnT5" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Blank Space</h4><p class="text-xs text-stone-500">Taylor Swift</p></div></div>
+                                <a href="https://youtu.be/e-ORhEE9VVg?si=1nR9AqIep8yMcbmS" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Espresso</h4><p class="text-xs text-stone-500">Sabrina Carpenter</p></div></div>
+                                <a href="https://youtu.be/eVli-tstM5E?si=JLfS1GzT2RbEE2nv" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Save Your Tears</h4><p class="text-xs text-stone-500">The Weeknd</p></div></div>
+                                <a href="https://youtu.be/XXYlFuWEuKI?si=K2UUpDy7eKysSUUr" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Chandelier</h4><p class="text-xs text-stone-500">Sia</p></div></div>
+                                <a href="https://youtu.be/2vjPBrBU-TM?si=wyWxuRY-d6rFW1Fk" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Positions</h4><p class="text-xs text-stone-500">Ariana Grande</p></div></div>
+                                <a href="https://youtu.be/tcYodQoapMg?si=xYPuERY5zadiaL22" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Brooklyn Baby</h4><p class="text-xs text-stone-500">Lana Del Rey</p></div></div>
+                                <a href="https://youtu.be/T5xcnjAG8pE?si=GhMxpo7JpcxC7kcH" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BLOQUE ROCK -->
+                    <div>
+                        <h3 class="text-xl font-bold text-rose-600 font-fredoka mb-4 flex items-center gap-2"><span>🎸</span> ROCK</h3>
+                        <div class="space-y-3">
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Sweater Weather</h4><p class="text-xs text-stone-500">The Neighbourhood</p></div></div>
+                                <a href="https://youtu.be/GCdwKhTtNNw?si=MmHkDge3AwAiYpJy" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Boulevard of Broken Dreams</h4><p class="text-xs text-stone-500">Green Day</p></div></div>
+                                <a href="https://youtu.be/Soa3gO7tL-c?si=gvF2xC8LsYZqbWyt" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Ride</h4><p class="text-xs text-stone-500">Twenty One Pilots</p></div></div>
+                                <a href="https://youtu.be/Pw-0pbY9JeU?si=EcgFIwGH7T9MkUCh" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Stop Crying Your Heart Out</h4><p class="text-xs text-stone-500">Oasis</p></div></div>
+                                <a href="https://youtu.be/dhZUsNJ-LQU?si=5DKTL8Yv99bBo4fK" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Awake and Alive</h4><p class="text-xs text-stone-500">Skillet</p></div></div>
+                                <a href="https://youtu.be/2aJUnltwsqs?si=vTnKbsNwfmamUGcP" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BLOQUE INDIE ROCK -->
+                    <div>
+                        <h3 class="text-xl font-bold text-rose-600 font-fredoka mb-4 flex items-center gap-2"><span>🌿</span> INDIE ROCK & ALTERNATIVO</h3>
+                        <div class="space-y-3">
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Blue Hair</h4><p class="text-xs text-stone-500">TV Girl</p></div></div>
+                                <a href="https://youtu.be/PzIXNqpCug0?si=AmfmaPDcCUmsnTxx" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">The Less I Know The Better</h4><p class="text-xs text-stone-500">Tame Impala</p></div></div>
+                                <a href="https://youtu.be/2SUwOgmvzK4?si=zBX_7nnpx6O3koxT" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">I Wanna Be Yours</h4><p class="text-xs text-stone-500">Arctic Monkeys</p></div></div>
+                                <a href="https://youtu.be/nyuo9-OjNNg?si=C6XENm8zIpzeJyO5" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">No Mercy</h4><p class="text-xs text-stone-500">The Living Tombstone</p></div></div>
+                                <a href="https://youtu.be/d0RmRJsgP28?si=-VAKST4lLj1tokqs" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Chachachá</h4><p class="text-xs text-stone-500">Jósean Log</p></div></div>
+                                <a href="https://youtu.be/sDMxQF18yvA?si=Usaqmd_y-kTrSlg8" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BLOQUE REGGAETON -->
+                    <div>
+                        <h3 class="text-xl font-bold text-rose-600 font-fredoka mb-4 flex items-center gap-2"><span>🔥</span> REGGAETON</h3>
+                        <div class="space-y-3">
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Chantaje</h4><p class="text-xs text-stone-500">Shakira ft. Maluma</p></div></div>
+                                <a href="https://youtu.be/6Mgqbai3fKo?si=uKzFUjsRFEgsXL7U" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Tusa</h4><p class="text-xs text-stone-500">Karol G & Nicki Minaj</p></div></div>
+                                <a href="https://youtu.be/tbneQDc2H3I?si=MpaHXBb8gqt8s_ck" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Parce</h4><p class="text-xs text-stone-500">Maluma</p></div></div>
+                                <a href="https://youtu.be/yUOuJI_66Q0?si=2MWZYPX0ERQfvMta" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Ritmo</h4><p class="text-xs text-stone-500">J Balvin</p></div></div>
+                                <a href="https://youtu.be/EzKkl64rRbM?si=pFLY0RtTl0V0-wi4" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Tití Me Preguntó</h4><p class="text-xs text-stone-500">Bad Bunny</p></div></div>
+                                <a href="https://youtu.be/Cr8K88UcO0s?si=uMeoD5G6lLSLmf43" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Criminal</h4><p class="text-xs text-stone-500">Ozuna & Natti Natasha</p></div></div>
+                                <a href="https://youtu.be/VqEbCxg2bNI?si=_36nvBS6gXcyhns3" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BLOQUE K-POP -->
+                    <div>
+                        <h3 class="text-xl font-bold text-rose-600 font-fredoka mb-4 flex items-center gap-2"><span>✨</span> K-POP</h3>
+                        <div class="space-y-3">
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">DDU-DU DDU-DU</h4><p class="text-xs text-stone-500">BLACKPINK</p></div></div>
+                                <a href="https://youtu.be/IHNzOHi8sJs?si=l6Du-cOlO_ZYaHhQ" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Dynamite</h4><p class="text-xs text-stone-500">BTS</p></div></div>
+                                <a href="https://youtu.be/gdZLi9oWNZg?si=VjnLnYCmdpcZ5qjp" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Red Flavor</h4><p class="text-xs text-stone-500">Red Velvet</p></div></div>
+                                <a href="https://youtu.be/WyiIGEHQP8o?si=XwhVtxiG3rN_77Tv" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Lilac</h4><p class="text-xs text-stone-500">IU</p></div></div>
+                                <a href="https://youtu.be/v7bnOxV4jAc?si=e_rs77K6QXRW7rYU" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Tamed-Dashed</h4><p class="text-xs text-stone-500">ENHYPEN</p></div></div>
+                                <a href="https://youtu.be/6IRsW_TkyVA?si=DVicDjdYkMDTppDg" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Run Away</h4><p class="text-xs text-stone-500">TXT</p></div></div>
+                                <a href="https://youtu.be/6yWPfUz0z94?si=4ZhGwUOTtOJRrT_u" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Love Shot</h4><p class="text-xs text-stone-500">EXO</p></div></div>
+                                <a href="https://youtu.be/pSudEWBAYRE?si=Pg77RYQdTFp_8IEY" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">The Feels</h4><p class="text-xs text-stone-500">TWICE</p></div></div>
+                                <a href="https://youtu.be/f5_wn8mexmM?si=DncUYdSGioEmd05l" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Just Right</h4><p class="text-xs text-stone-500">GOT7</p></div></div>
+                                <a href="https://youtu.be/vrdk3IGcau8?si=pQceV93IKdOYcHvV" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">4 Walls</h4><p class="text-xs text-stone-500">f(x)</p></div></div>
+                                <a href="https://youtu.be/4j7Umwfx60Q?si=wBzMiUvq_xb4xUul" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Queencard</h4><p class="text-xs text-stone-500">(G)I-DLE</p></div></div>
+                                <a href="https://youtu.be/7HDeem-JaSY?si=KxWVLSZ07hLc12NY" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">WANNABE</h4><p class="text-xs text-stone-500">ITZY</p></div></div>
+                                <a href="https://youtu.be/fE2h3lGlOsk?si=7WEJe1XlPngLSQln" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Savage</h4><p class="text-xs text-stone-500">aespa</p></div></div>
+                                <a href="https://youtu.be/WPdWvnAAurg?si=HdbYqxfbqYykbBH2" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BLOQUE J-POP -->
+                    <div>
+                        <h3 class="text-xl font-bold text-rose-600 font-fredoka mb-4 flex items-center gap-2"><span>🌸</span> J-POP</h3>
+                        <div class="space-y-3">
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Aishite Aishite Aishite</h4><p class="text-xs text-stone-500">Ado</p></div></div>
+                                <a href="https://youtu.be/U8BlNEKq0r8?si=mZ8Njm_uP_GlKgLh" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Popipo</h4><p class="text-xs text-stone-500">Hatsune Miku</p></div></div>
+                                <a href="https://youtu.be/TNf3GPizM58?si=38gpi_klHIq7OEGL" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Gimme Chocolate!!</h4><p class="text-xs text-stone-500">BABYMETAL</p></div></div>
+                                <a href="https://youtu.be/WIKqgE4BwAY?si=Dba0ObCR3RfnhSjO" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">Idol (アイドル)</h4><p class="text-xs text-stone-500">YOASOBI</p></div></div>
+                                <a href="https://youtu.be/ZRtdQ81jPUQ?si=IVebqcH4QgWU2NUK" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                            <div class="p-4 bg-rose-50/50 rounded-2xl border border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-3"><div class="w-10 h-10 bg-rose-200 rounded-xl flex items-center justify-center text-rose-600 shrink-0"><i class="fa-solid fa-music"></i></div><div><h4 class="font-bold text-stone-800">I Choose You</h4><p class="text-xs text-stone-500">F5VE</p></div></div>
+                                <a href="https://youtu.be/WL8OwB0ElJg?si=dKIVFNPi47GpZIGU" target="_blank" rel="noopener noreferrer" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-full text-xs shadow transition flex items-center gap-1.5 shrink-0"><i class="fa-brands fa-youtube"></i> Ir a YouTube ↗</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE CONTACTO -->
+        <section id="contacto" class="max-w-xl mx-auto px-4 py-12">
+            <div class="bg-white/95 backdrop-blur border-2 border-pink-200 rounded-3xl p-6 md:p-8 shadow-2xl text-center">
+                <h2 class="text-2xl md:text-3xl font-bold text-rose-600 font-fredoka mb-2">¡Contáctanos! 💌</h2>
+                <p class="text-stone-500 text-sm mb-6">¿Tienes sugerencias de canciones para la playlist? ¡Escríbenos!</p>
+                <form onsubmit="event.preventDefault(); alert('¡Mensaje enviado con éxito! 🍓');" class="space-y-4 text-left">
+                    <div>
+                        <label class="block text-xs font-bold text-stone-600 mb-1">Tu Nombre</label>
+                        <input type="text" required class="w-full px-4 py-2 border border-pink-200 rounded-xl focus:outline-none focus:border-rose-400 bg-rose-50/30">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-stone-600 mb-1">Canción recomendada</label>
+                        <input type="text" required class="w-full px-4 py-2 border border-pink-200 rounded-xl focus:outline-none focus:border-rose-400 bg-rose-50/30" placeholder="Artista y título">
+                    </div>
+                    <button type="submit" class="w-full bg-rose-500 hover:bg-rose-600 text-white font-bold py-3 rounded-xl shadow-md transition cursor-pointer">
+                        Enviar Sugerencia 🍓
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="bg-white/80 border-t-2 border-pink-200 text-center py-6 text-stone-500 text-sm font-medium">
+        <p>Hecho con mucho amor y 🍓 para disfrutar de la música • Playlist KAWAI © 2026</p>
+    </footer>
+
+    <!-- MODAL DE INFORMACIÓN PARA LAS TARJETAS -->
+    <div id="info-modal" class="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl p-6 max-w-md w-full border-2 border-pink-200 shadow-2xl relative">
+            <h3 id="modal-title" class="text-2xl font-bold text-rose-600 font-fredoka mb-3">Título</h3>
+            <p id="modal-desc" class="text-stone-600 text-sm leading-relaxed mb-6">Descripción...</p>
+            <button onclick="closeInfoModal()" class="w-full bg-rose-500 hover:bg-rose-600 text-white font-bold py-2.5 rounded-xl transition cursor-pointer">
+                ¡Entendido! 🍓
+            </button>
+        </div>
+    </div>
+
+    <!-- SCRIPT JAVASCRIPT -->
+    <script>
+        // Menú móvil
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Ocultar menú móvil al hacer clic en un enlace
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Modales de Tarjetas
+        function openInfoModal(title, text) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-desc').innerText = text;
+            document.getElementById('info-modal').classList.remove('hidden');
+        }
+
+        function closeInfoModal() {
+            document.getElementById('info-modal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
